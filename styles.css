@@ -1,0 +1,237 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+header{
+background-color: antiquewhite;
+height: 200px;
+display: flex;
+align-items: center;
+justify-content: center;
+padding: 1rem;
+gap: 1rem;
+flex-wrap: wrap;
+background-image: url(./Assets/Captura\ de\ pantalla\ 2023-06-20\ 160318.png);
+background-position-y: 50%;
+background-position-x: 50%;
+background-size:cover;
+}
+nav{
+    background-color: rgb(229, 229, 0);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0.5rem;
+    
+}
+.navegacion{
+    display: flex;
+    width: 13rem;
+    height: 3.5rem;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 1rem;
+    padding: 0.8rem;
+    margin-left: 1rem;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    background-color: rgb(247, 47, 12);
+    transition: all 0.5s;
+    justify-content: center;
+    color: black;
+}
+.navegacion:hover{
+background-color: black;
+color: white;
+transform: scale(1.1);
+
+}
+header img{
+    display: flex;
+    height: 100px;
+    width: 100px;
+    border: 50%;
+    justify-content:start;
+    align-items: center;
+    transition: all 0.7s;
+}
+header img:hover{
+    transform: scale(1.3);
+    rotate: 360deg;
+}
+h1{
+    font-size: 5rem;
+    flex-grow: 1;
+    text-align: start;
+    font-family: 'Rubik Distressed', cursive;
+}
+main{
+    background-color: rgb(252, 253, 211);
+    min-height: 79vh;
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+
+}
+main h2{
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+
+}
+
+footer{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    background-color: darkblue;
+    color: white;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+}
+.red{
+    display: flex;
+    justify-content: flex-start;
+    height: 20px;
+    width: 20px;
+}
+.redes{
+    display: flex;
+    justify-content: flex-start;
+    align-content: flex-start;
+}
+h4{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.conteinerCarta{
+    display: flex;
+    width: 90vw;
+    height: 600px;
+    justify-content: space-around;
+    align-items:center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+
+
+
+
+
+
+.ContenedorCarrusel{
+    display: flex;
+   align-content: flex-start;
+    width: 40%;
+    height: 100%;
+}
+.Informacion{
+    width: 60%;
+
+}
+.General{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+
+
+
+
+
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
