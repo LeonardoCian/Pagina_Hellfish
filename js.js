@@ -56,10 +56,10 @@ let current = 0;
     templateCard += 
     `<div class"card">
         <p>
-        Soldado :${integrante.nombre},
-        Apodo: ${integrante.apodo},
-        Rango:${integrante.rango},
-        Estado: ${integrante.estado}
+        Nombre: ${integrante.nombre}<br>
+        Apodo:  ${integrante.apodo}<br>
+        Rango:  ${integrante.rango}<br>
+        Estado: ${integrante.estado}<br>
         <p/>
     <div/>`;
    
