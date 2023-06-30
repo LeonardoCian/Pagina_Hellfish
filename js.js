@@ -27,7 +27,7 @@ function showSlides(n) {
 }
   
 
- var integrante=[
+ var integrantes=[
   {nombre:"Asa Phelps",apodo:"Asa",rango:"Soldado de asalto",estado:"Muerto, año 2000"},
 {nombre:"Charles Montgomery Burns",apodo:"Burns",rango:"Soldado raso",estado:"Vivo"},
 {nombre:"Arnie Gómez",apodo:"Gómez",rango:"Soldado raso - Conductor de tanque",estado:"Muerto, año 1979"},
@@ -40,20 +40,43 @@ function showSlides(n) {
  ];
  
 let prev = document.querySelector(".prev");
-let next = document.querySelector(".next");
+let next = document.querySelector(".next"); 
+let current = 0;
 
   function showNext() {
-    let objeto = integrante;
-    let contenedor = document.querySelector(".Informacion");
-    let info = document.getElementById('info');
-    //let cadena ="Nombre:"+objeto.nombre+"\nApodo: "+objeto.apodo+"\nRango: "+objeto.rango+"\nEstado: "+objeto.estado;
-const mapArray =() => {objeto.map(({key, value}) =>({[key]: value}))};
-    info.textContent=mapArray();
-    contenedor.appendChild(info);
+    if(current === integrantes.length)
+    current = 0;
+
+    console.log(current);
+    const contenedor_cards = document.getElementById("Informacion");
+    let templateCard = "";
+    let integrante = integrantes[current];
+    current++;
+   
+    templateCard += 
+    `<div class"card">
+        <p>
+        Soldado :${integrante.nombre},
+        Apodo: ${integrante.apodo},
+        Rango:${integrante.rango},
+        Estado: ${integrante.estado}
+        <p/>
+    <div/>`;
+   
+   contenedor_cards.innerHTML = templateCard;
   };
 
-  function showPrev(){
+  showNext();
 
+  function showPrev(){
+    console.log(current);
+    if(current <= 1){
+      current = integrantes.length -1;
+    }
+    else{
+      current -= 2;
+    }
+     return showNext();
   };
   next.addEventListener('click', ()=>{
     showNext();
